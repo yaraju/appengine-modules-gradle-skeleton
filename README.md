@@ -8,6 +8,11 @@ A skeleton for getting started with a single-module Google Appengine app, but us
 * Clone the project
 `git clone git@github.com:yourgithubid/appengine-modules-gradle-skeleton.git`
 * Import into an IDE supporting Gradle
-  * [Android Studio](http://stackoverflow.com/questions/25537126/android-studio-import-project-from-gradle)
-  * [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-gradle-model.html)
-  * [Eclipse](http://stackoverflow.com/questions/10722773/import-existing-gradle-git-project-into-eclipse-for-example-hibernate-orm)
+ * [Android Studio](http://stackoverflow.com/questions/25537126/android-studio-import-project-from-gradle)
+ * [IntelliJ](https://www.jetbrains.com/idea/help/importing-project-from-gradle-model.html)
+ * [Eclipse](http://stackoverflow.com/questions/10722773/import-existing-gradle-git-project-into-eclipse-for-example-hibernate-orm)
+* Run it!
+ ` gradle :backend:appengineRun`
+ (It will start serving at http://localhost:8080)
+
+ Or you can use Run Configurations to enable debugging in IDE
