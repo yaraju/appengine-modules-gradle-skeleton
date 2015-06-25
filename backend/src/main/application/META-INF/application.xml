@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- This is the application.xml file intended for use with gradle, if you find it in your maven project, then that's a problem most likely. -->
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+    <display-name>snippets-ear</display-name>
+    <module>
+        <web>
+            <!--
+               It is recommended the first module is the default module, so that
+            the first deployment will work (and create the mandatory default module,
+            before deploying the second module.
+          -->
+            <web-uri>app</web-uri>
+            <context-root>app</context-root>
+        </web>
+    </module>
+</application>

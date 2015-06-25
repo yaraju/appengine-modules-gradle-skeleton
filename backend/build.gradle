@@ -1,0 +1,34 @@
+apply plugin: 'java'
+apply plugin: 'ear'
+apply plugin: 'appengine'
+
+sourceCompatibility = 1.7
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.21'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.22'
+    deploy project(path: ':app', configuration: 'archives')
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+appengine {
+    downloadSdk = true
+    httpAddress = "0.0.0.0"
+    jvmFlags = ['-Dcom.google.appengine.devappserver_module.default.port=8080']
+    appcfg {
+        email = "me@domain.com"
+        oauth2 = true
+    }
+}

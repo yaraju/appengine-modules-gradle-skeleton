@@ -1,0 +1,31 @@
+apply plugin: 'war'
+apply plugin: 'appengine'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.21'
+    }
+}
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    appengineSdk 'com.google.appengine:appengine-java-sdk:1.9.22'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+appengine {
+    downloadSdk = true
+    httpAddress = "0.0.0.0"
+    appcfg {
+        email = "me@domain.com"
+        oauth2 = true
+    }
+}
